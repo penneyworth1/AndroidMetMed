@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You found view 1" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is a useless checkbox. Go ahead, check it. Uncheck it. I don't really care." />
+
+    <Button
+        android:id="@+id/DL2_btnGoto3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="goto subpage3" />
+
+    <Button
+        android:id="@+id/btnBackDL2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
+</LinearLayout>

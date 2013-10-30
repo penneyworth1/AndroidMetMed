@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:id="@+id/rlVideoTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@color/topBarOpaque"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rlVideoBackButton"
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_alignParentLeft="true" >
+	        <ImageView
+	            android:id="@+id/ivVideoBackButton"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/back" />
+        </RelativeLayout>
+        
+        <TextView
+	        android:id="@+id/tvVideoTitle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:text="VIDEO"
+	        android:textColor="#FFFFFF" />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/rlVideoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF222222"
+        >
+        
+	</RelativeLayout>
+
+</LinearLayout>

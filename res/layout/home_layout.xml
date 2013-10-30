@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.metamedia.citizentv.CTVScrollView
+	    android:id="@+id/svHomeVideoListContainer"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:fillViewport="true" >
+	    
+        <LinearLayout
+	        android:id="@+id/llHomeVideoListSingleScrollviewChild"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" 
+	        android:background="@color/topBarOpaque">
+	    
+	        <LinearLayout
+		        android:id="@+id/llHomeVideoListFillerContainer"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical" 
+		        android:background="@color/topBarOpaque">
+		        
+	            <RelativeLayout
+			        android:id="@+id/rlTopBarFiller"
+			        android:layout_width="fill_parent"
+			        android:layout_height="100px"
+			        android:background="@color/topBarOpaque"
+			        android:orientation="horizontal" >
+				</RelativeLayout>
+				
+		        <ProgressBar
+		            android:id="@+id/pbHomeInitializing"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+					android:layout_gravity="center"
+		            android:visibility="visible" />
+		        
+		        <!-- This dummy video view is unfortunately necessary. Without it, the first time we load a video view object, the screen will flicker. There needs to be a video view somewhere on an activity when it starts in order for the activity to not have to switch to 32 bits per pixel when a video view is added (which causes the flicker). I don't pretend to understand this, but this is the explanation found on the interwebz. -->
+		        <VideoView
+			        android:id="@+id/dummyVideoView"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:visibility="invisible" />
+		        
+	        </LinearLayout>
+	    
+		    <LinearLayout
+		        android:id="@+id/llHomeVideoListContainer"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical" 
+		        android:background="@color/topBarOpaque">
+		        
+		    </LinearLayout>
+	    
+	    </LinearLayout>
+    
+    </com.metamedia.citizentv.CTVScrollView>
+    
+    <RelativeLayout
+        android:id="@+id/rlHomeTopBar"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/topBarTransparent"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rlHomeThreeLinesContainer"
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_alignParentLeft="true" >
+	        <ImageView
+	            android:id="@+id/ivHomeThreeLines"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/threelines" />
+        </RelativeLayout>
+        
+        <TextView
+	        android:id="@+id/tvHomeTitle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:text="CITIZEN TV"
+	        android:textColor="#FFFFFF" />
+
+        <RelativeLayout
+            android:id="@+id/rlHomeThreeDotsContainer"
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_alignParentRight="true" >
+	        <ImageView
+	            android:id="@+id/ivHomeThreeDots"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/threedots" />
+        </RelativeLayout>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/rlHomeTabBar"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/rlHomeTopBar"
+        android:background="@color/tabBarTransparent"
+        android:orientation="horizontal" >
+        
+        <RelativeLayout
+            android:id="@+id/rlHomeRecentTab"
+            android:layout_width="150px"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true" >
+	        <TextView
+		        android:id="@+id/tvHomeRecentText"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:text="RECENT"
+		        android:textColor="#DD000000" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/rlWhatsHotTab"
+            android:layout_width="150px"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/rlHomeRecentTab" >
+	        <TextView
+		        android:id="@+id/tvHomeWhatsHotText"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:text="WHAT'S HOT"
+		        android:textColor="#DD000000" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/rlWinnersTab"
+            android:layout_width="150px"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/rlWhatsHotTab" >
+	        <TextView
+		        android:id="@+id/tvHomeWinnersText"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:text="WINNERS"
+		        android:textColor="#DD000000" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/rlTabUnderline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+            android:background="@color/topBarTransparent" >
+	        
+            
+        </RelativeLayout>
+        
+    </RelativeLayout>
+
+</RelativeLayout>

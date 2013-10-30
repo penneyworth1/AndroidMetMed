@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="topBarTransparent">#BBee753a</color>
+	<color name="topBarOpaque">#FFee753a</color>
+	<color name="tabBarTransparent">#DDFFFFFF</color>
+	<color name="videoTumbnailOverlayTextColor">#FFFFFFFF</color>
+</resources>
